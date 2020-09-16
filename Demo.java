@@ -1,8 +1,8 @@
-class Demo {  // DB
+class Demo {  // DC
 	public static void main(String... args){
 		SpijkerStof sp = new Broek();
 		Wasmachine w = new Wasmachine();
-		w.wassen(sp);
+		w.wassen((Wasbaar)sp);
 		System.out.println("Einde");
 	}
 }
@@ -14,6 +14,10 @@ class Wasmachine{
 }
 
 class Broek extends Kleding implements SpijkerStof{
+
+}
+
+class ZitPoef implements SpijkerStof{
 
 }
 
