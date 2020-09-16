@@ -1,10 +1,14 @@
-class Demo {  // AL
+class Demo {  // AM
 	public static void main(String... args){
-		int[][][] go = {null, null, {null, {4,5,6,7},{4,5}},{{8,7,6}, null }};
+		int[][][] go = {    { {5,6,2,8,9}}, {{4,5,6,7},{4,25}},{{8,7,9} }     };
 
+		int getal = 4;
+		int[] rij = {6,7,8};
+		int[] tabel[] = {{5,7,8,9},{4,9,8,2}};
 
-
-		System.out.println("FF checken "+go[2][1].length);
+		//tabel[2]
+		int [] kubus[][] = {{{4}}};
+		System.out.println("FF checken "+go[1][1][1]);
 
 	}
 
