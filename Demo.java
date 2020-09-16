@@ -1,21 +1,10 @@
-class Demo {  // AE
+class Demo {  // AJ
 	public static void main(String... args){
-		Fiets fiets = new Fiets();
-		Fiets fiets2 = new Mountainbike();
+		int[][][] go = {null, null, {null, {4,5,6,7},{4,5}},{{8,7,6}, null }};
+		System.out.println("FF checken");
+
 	}
 
-}
-
-class Fiets{
-	Fiets(){
-		System.out.println("in Fiets");	
-	}
-}
-
-class Mountainbike extends Fiets{
-	Mountainbike(){
-		System.out.println("in Moutainbike");	
-	}
 }
 
 
