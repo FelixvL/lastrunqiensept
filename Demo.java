@@ -1,4 +1,4 @@
-class Demo {  // EH
+class Demo {  // EI
 	public static void main(String... args){
 		System.out.println("baantje trekken");
 		Zwembad tongelreep = new Zwembad();
@@ -6,7 +6,7 @@ class Demo {  // EH
 		Zwemmer pieter = new Zwemmer();
 		try{
 			pieter.zwemmen();
-		}catch(Exception e){
+		}catch(Throwable e){
 			System.out.println("Geen plons voorlopig");
 		}
 	}
@@ -14,11 +14,11 @@ class Demo {  // EH
 
 class Zwemmer{
 	Zwembad z = new Zwembad();
-	void zwemmen() throws Exception{
+	void zwemmen() throws Throwable{
 		if(z.aantalCM < 50){
 			try{
-				throw new Exception();
-			}catch(Throwable t){
+				throw new Throwable();
+			}catch(Exception t){
 				System.out.println("FF de kraan aanzetten");
 			}
 		}else{
@@ -28,7 +28,7 @@ class Zwemmer{
 }
 
 class Zwembad{
-	static int aantalCM = 50;
+	int aantalCM = 50;
 }
 
 
