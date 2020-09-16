@@ -1,7 +1,8 @@
-class Demo {  // ED
+class Demo {  // EF
 	public static void main(String... args){
 		System.out.println("baantje trekken");
 		Zwembad tongelreep = new Zwembad();
+		tongelreep.aantalCM = 35;
 		Zwemmer pieter = new Zwemmer();
 		pieter.zwemmen();
 	}
@@ -9,7 +10,7 @@ class Demo {  // ED
 
 class Zwemmer{
 	Zwembad z = new Zwembad();
-	void zwemmen(){
+	void zwemmen() throws Exception{
 		if(z.aantalCM < 50){
 			try{
 				throw new Exception();
@@ -23,7 +24,7 @@ class Zwemmer{
 }
 
 class Zwembad{
-	int aantalCM = 50;
+	static int aantalCM = 50;
 }
 
 
