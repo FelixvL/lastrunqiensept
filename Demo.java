@@ -1,4 +1,4 @@
-class Demo {  // DC
+class Demo {  // DD
 	public static void main(String... args){
 		SpijkerStof sp = new Broek();
 		Wasmachine w = new Wasmachine();
@@ -9,6 +9,7 @@ class Demo {  // DC
 class Wasmachine{
 	void wassen(Wasbaar w){
 		System.out.println("wasjes");
+		w.wassen();
 	}
 	
 }
@@ -22,11 +23,13 @@ class ZitPoef implements SpijkerStof{
 }
 
 class Kleding implements Wasbaar{
-
+	void wassen(){
+		System.out.println("Wassen in Kleding");
+	}
 }
 
 interface Wasbaar{
-
+	void wassen();
 }
 
 interface SpijkerStof{
