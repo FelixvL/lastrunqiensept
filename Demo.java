@@ -1,18 +1,13 @@
-class Demo {  // CB
+class Demo {  // CD
 	public static void main(String... args){
-		Arts karel = new Chirurg();
-		karel.BelleBellen();
+		System.out.println("Hij doet het");
 	}
 }
 abstract class Arts{
-	void BelleBellen(){
-		System.out.println("Wat is je naam?");
-	}
+	abstract void BelleBellen();
 }
-class Chirurg extends Arts{
-	void BelleBellen(){
-		System.out.println("Hoe gaat het?");
-	}
+abstract class Chirurg extends Arts{
+
 
 }
 
