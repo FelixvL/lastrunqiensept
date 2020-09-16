@@ -1,4 +1,4 @@
-class Demo {  // DO
+class Demo {  // DQ
 	public static void main(String... args){
 		Wasmachine wm1 = new Wasmachine();
 		Wasmachine wm2 = new Wasmachine();
@@ -17,7 +17,7 @@ class Wasmachine{
 		System.out.println("wasjes" + w.temperatuur);
 		w.wassen();
 	}
-	int optillen(){
+	static int optillen(){
 		System.out.println("aan het optillen");
 		return 9;
 	}	
