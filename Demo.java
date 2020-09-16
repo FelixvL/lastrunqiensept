@@ -1,4 +1,4 @@
-class Demo {  // DA
+class Demo {  // DB
 	public static void main(String... args){
 		SpijkerStof sp = new Broek();
 		Wasmachine w = new Wasmachine();
@@ -17,7 +17,7 @@ class Broek extends Kleding implements SpijkerStof{
 
 }
 
-class Kleding implement Wasbaar{
+class Kleding implements Wasbaar{
 
 }
 
@@ -29,7 +29,7 @@ interface SpijkerStof{
 
 }
 
-class Blouse implements Kleding{
+class Blouse extends Kleding{
 
 }
 
