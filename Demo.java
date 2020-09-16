@@ -1,4 +1,4 @@
-class Demo {  // DJ
+class Demo {  // DL
 	public static void main(String... args){
 		Wasmachine wm = new Wasmachine();
 		wm.wassen(new Broek());
@@ -8,7 +8,7 @@ class Demo {  // DJ
 
 
 class Wasmachine{
-	void wassen(Wasbaar w){
+	void wassen(Kleding w){
 		System.out.println("wasjes" + w.temperatuur);
 		w.wassen();
 	}
