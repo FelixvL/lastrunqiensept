@@ -1,34 +1,10 @@
-class Demo {  // DH
+class Demo {  // DI
 	public static void main(String... args){
-	//	SpijkerStof sp = new Broek();
-	//	Wasmachine w = new Wasmachine();
-	//	w.wassen((Wasbaar)sp);
-	//	System.out.println("Einde");
-		Dier dier = new Hond();
-		dier.lopen();
+		Wasmachine wm = new Wasmachine();
+		wm.wassen(new Broek());
+		wm.wassen(new Blouse());
 	}
 }
-
-class Organisme{
-	void lopen(){
-		System.out.println("in organisme");
-	}
-}
-
-class Dier extends Organisme{
-	
-}
-class Hond extends Dier{
-	void lopen(){ //2
-		System.out.println("in hond");
-	}
-}
-class Slang extends Dier{
-
-}
-
-
-
 
 
 class Wasmachine{
