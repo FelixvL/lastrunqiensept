@@ -1,52 +1,23 @@
-import java.io.*;
-class Demo {  // EX
-	public static void main(String... args){
-		System.out.println("baantje trekken");
-		Zwembad tongelreep = new Zwembad();
-		tongelreep.aantalCM = 35;
-		Zwemmer pieter = new Zwemmer();
-		pieter.z = tongelreep;
-		new KanaalZwemmer();new Zwemmer();
-		try{
-			pieter.zwemmen();
-		}catch(IOException e){
-			System.out.println("Emmers Kopen");
-		}
-		catch(Exception e2){
-			System.out.println("Badmeester halen");
-		}
-		catch(Throwable e3){
-			System.out.println("Geen plons voorlopig");
-		}
-		System.out.println("ff afdrogen");
-	}
-}
-class Zwemmer{
-	Zwemmer(){
-		z.aantalCM +=10;
-	}
-	Zwembad z = new Zwembad();
-	void zwemmen() throws Exception, IOException{
-		if(z.aantalCM < 50){
-				throw new Error();
-		}else{
-			System.out.println("FF mijn brilletje opzetten");
-		}
-	}
-}
-class KanaalZwemmer extends Zwemmer{
-	void zwemmen() throws Exception{
-		System.out.println("Ik wil ook op Brexit");
-	}
-}
-class Zwembad{
-	static int aantalCM = 50;
+class Demo{   // HA
+    static int x = 50;
+    public static void main(String[] args) {
+        new Y().z(x);
+
+    }
 }
 
-
-
-
-
-
-
-
+class Y{
+    int x = 10;
+    static int y = 20;
+    final int z = 60;
+    public void z(int z){
+        int x = 30;
+        int y = 40;
+        System.out.println(this.x);
+        System.out.println(Y.y);
+        System.out.println(x);
+        System.out.println(this.z);
+        System.out.println(y);
+        System.out.println(z);
+    }
+}
