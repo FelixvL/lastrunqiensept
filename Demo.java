@@ -1,4 +1,4 @@
-class Demo {  // DI
+class Demo {  // DJ
 	public static void main(String... args){
 		Wasmachine wm = new Wasmachine();
 		wm.wassen(new Broek());
@@ -9,21 +9,22 @@ class Demo {  // DI
 
 class Wasmachine{
 	void wassen(Wasbaar w){
-		System.out.println("wasjes");
+		System.out.println("wasjes" + w.temperatuur);
 		w.wassen();
 	}
 	
 }
 
 class Broek extends Kleding implements SpijkerStof{
-
+	int temperatuur = 4;
 }
 
 class ZitPoef implements SpijkerStof{
-
+	int temperatuur = 5;
 }
 
 class Kleding implements Wasbaar{
+	int temperatuur = 6;
 	public void wassen(){
 		System.out.println("Wassen in Kleding");
 	}
@@ -38,7 +39,7 @@ interface SpijkerStof{
 }
 
 class Blouse extends Kleding{
-
+	int temperatuur = 7;
 }
 
 
