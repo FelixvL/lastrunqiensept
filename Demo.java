@@ -1,23 +1,43 @@
-class Demo{   // HA
-    static int x = 50;
+public class Demo {   // HB
     public static void main(String[] args) {
-        new Y().z(x);
-
+        System.out.println("even een leuke dier vinden");
+        Dier nina = new Hond();
+        Beer yogi = new Beer();
+        Dier felix = new Mens();
+        felix.spelen(nina, yogi);
     }
 }
 
-class Y{
-    int x = 10;
-    static int y = 20;
-    final int z = 60;
-    public void z(int z){
-        int x = 30;
-        int y = 40;
-        System.out.println(this.x);
-        System.out.println(Y.y);
-        System.out.println(x);
-        System.out.println(this.z);
-        System.out.println(y);
-        System.out.println(z);
+interface Huisdier {
+    default void chillen() {
+        System.out.println("de huisdier is relaxed");
+    }
+}
+abstract class Dier {
+    abstract void aaien() throws Exception;
+    public void spelen(Dier een, Dier twee) {
+        try {
+            twee.aaien();
+        } catch (Exception e) {
+            System.out.println( "DE BEER IS BOOS! WEG LOPEN!");
+        }
+    }
+}
+class Mens extends Dier {
+    void aaien() {
+        System.out.println("dit is heel raar");
+    }
+}
+class Hond extends Dier implements Huisdier {
+    public void aaien() {
+        System.out.println("wat een geweldig beest");
+    }
+    public void chillen() {
+        System.out.println("de hond is chill");
+    }
+}
+class Beer extends Dier {
+    public void aaien() throws Exception {
+        throw new Exception();
     }
 }
