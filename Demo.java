@@ -1,5 +1,5 @@
 import java.io.*;
-class Demo {  // ES
+class Demo {  // EX
 	public static void main(String... args){
 		System.out.println("baantje trekken");
 		Zwembad tongelreep = new Zwembad();
@@ -40,7 +40,7 @@ class KanaalZwemmer extends Zwemmer{
 	}
 }
 class Zwembad{
-	int aantalCM = 50;
+	static int aantalCM = 50;
 }
 
 
