@@ -1,6 +1,9 @@
-class Demo {  // EC
+class Demo {  // ED
 	public static void main(String... args){
 		System.out.println("baantje trekken");
+		Zwembad tongelreep = new Zwembad();
+		Zwemmer pieter = new Zwemmer();
+		pieter.zwemmen();
 	}
 }
 
