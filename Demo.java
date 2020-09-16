@@ -1,10 +1,14 @@
-class Demo {  // EF
+class Demo {  // EH
 	public static void main(String... args){
 		System.out.println("baantje trekken");
 		Zwembad tongelreep = new Zwembad();
 		tongelreep.aantalCM = 35;
 		Zwemmer pieter = new Zwemmer();
-		pieter.zwemmen();
+		try{
+			pieter.zwemmen();
+		}catch(Exception e){
+			System.out.println("Geen plons voorlopig");
+		}
 	}
 }
 
