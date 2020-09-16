@@ -1,4 +1,4 @@
-class Demo {  // EB
+class Demo {  // EC
 	public static void main(String... args){
 		System.out.println("baantje trekken");
 	}
@@ -8,7 +8,11 @@ class Zwemmer{
 	Zwembad z = new Zwembad();
 	void zwemmen(){
 		if(z.aantalCM < 50){
-			throw new Exception();
+			try{
+				throw new Exception();
+			}catch(Throwable t){
+				System.out.println("FF de kraan aanzetten");
+			}
 		}else{
 			System.out.println("FF mijn brilletje opzetten");
 		}
