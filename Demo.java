@@ -1,10 +1,10 @@
-class Demo {  // DG
+class Demo {  // DH
 	public static void main(String... args){
 	//	SpijkerStof sp = new Broek();
 	//	Wasmachine w = new Wasmachine();
 	//	w.wassen((Wasbaar)sp);
 	//	System.out.println("Einde");
-		Dier dier = new Slang();
+		Dier dier = new Hond();
 		dier.lopen();
 	}
 }
