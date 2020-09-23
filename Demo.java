@@ -1,25 +1,26 @@
-// XA
+import java.io.*;
+// XB
 class Demo{
 	public static void main(String[] args){
 		RDW rdw = new RDW();
-		SportAuto waggie = new SportAuto();
-		rdw.rijexamen(waggie);
-		System.out.println("ready");
+		Auto waggie = new SportAuto();
+		Long l = rdw.rijexamen(waggie);
+		System.out.println("ready"+l);
 	}
 }
 class RDW{
-	void rijexamen(SportAuto sa){
+	void rijexamen(Auto sa){
 		sa.rijden();
 	}
 }
 class Auto{
-	int rijden() throws Exception{
+	int rijden() throws RuntimeException{
 		System.out.println("riA");
 		return 7;
 	}
 }
 class SportAuto extends Auto{
-	int rijden(){
+	int rijden() throws IOException{
 		System.out.println("riSA");
 		return 9;
 	}
