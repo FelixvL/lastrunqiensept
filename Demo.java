@@ -1,33 +1,27 @@
-// YJ
+// XA
 class Demo{
 	public static void main(String[] args){
-		System.out.println("Start");
-		Server s = new Server();
-		System.out.println(s.app);
-		App a = new App(25);
-		s.app = a;
-		System.out.println(s.app.prijs);
+		RDW rdw = new RDW();
+		SportAuto waggie = new SportAuto();
+		rdw.rijexamen(waggie);
+		System.out.println("ready");
 	}
 }
-class Server{
-	App app = new iApp(55);
-	App install(){
-		System.out.println("a");
-		return new iApp(23);
+class RDW{
+	void rijexamen(SportAuto sa){
+		sa.rijden();
 	}
 }
+class Auto{
+	int rijden() throws Exception{
+		System.out.println("riA");
+		return 7;
+	}
+}
+class SportAuto extends Auto{
+	int rijden(){
+		System.out.println("riSA");
+		return 9;
+	}
 
-class App{
-	int prijs = 12;
-	App(int prijs){
-		System.out.println("hup app"+prijs);
-		this.prijs = prijs;
-	}
-}
-class iApp extends App{
-	iApp(int prijs){
-		super(14);
-		System.out.println("hup iapp"+prijs);
-		this.prijs = prijs;
-	}
 }
