@@ -1,4 +1,4 @@
-// XF
+// XG
 class Demo{
 	public static void main(String[] args){
 		RDW rdw = new RDW();
@@ -10,8 +10,9 @@ class Demo{
 }
 class RDW{
 	void rijexamen(Auto sa){
+		int getal;
 		try{
-			int getal = sa.rijden();
+			getal = sa.rijden();
 		}catch(LekkeBandException e){
 			System.out.println("opgelost");
 		}
