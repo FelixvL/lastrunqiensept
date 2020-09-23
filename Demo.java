@@ -1,9 +1,13 @@
 
-// TR
+// YU
 class Demo{
 	public static void main(String[] args){
 		System.out.println("Start");
-		System.out.println(new Server().install().prijs);
+		Server s = new Server();
+		System.out.println(s.app);
+		App a = new iApp();
+		s.app = a;
+		System.out.println(s.a.prijs);
 	}
 }
 
