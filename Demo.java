@@ -1,5 +1,5 @@
 
-// YU
+// YZ
 class Demo{
 	public static void main(String[] args){
 		System.out.println("Start");
@@ -7,7 +7,7 @@ class Demo{
 		System.out.println(s.app);
 		App a = new iApp();
 		s.app = a;
-		System.out.println(s.a.prijs);
+		System.out.println(s.app.prijs);
 	}
 }
 
