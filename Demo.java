@@ -1,4 +1,4 @@
-// YE
+// YG
 class Demo{
 	public static void main(String[] args){
 		System.out.println("Start");
@@ -21,12 +21,12 @@ class App{
 	int prijs = 12;
 	App(int prijs){
 		System.out.println("hup app");
-		prijs = prijs;
+		this.prijs = prijs;
 	}
 }
 class iApp extends App{
-	int prijs = 24;
 	iApp(int prijs){
+		super(14);
 		System.out.println("hup iapp");
 		prijs = prijs;
 	}
