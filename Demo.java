@@ -1,19 +1,19 @@
-// YC
+// YE
 class Demo{
 	public static void main(String[] args){
 		System.out.println("Start");
 		Server s = new Server();
 		System.out.println(s.app);
-		iApp a = new iApp("25");
+		iApp a = new iApp(25);
 		s.app = a;
 		System.out.println(s.app.prijs);
 	}
 }
 class Server{
-	iApp app = new iApp("55");
+	iApp app = new iApp(55);
 	App install(){
 		System.out.println("a");
-		return new iApp();
+		return new iApp(23);
 	}
 }
 
