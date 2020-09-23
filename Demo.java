@@ -1,9 +1,8 @@
-// XG Oplossing
+// XI
 class Demo{
 	public static void main(String[] args){
 		RDW rdw = new RDW();
 		Auto waggie = new SportAuto();
-		rdw.rijexamen(waggie);
 		rdw.rijexamen(new Auto());
 		System.out.println("ready");
 	}
@@ -12,10 +11,12 @@ class RDW{
 	void rijexamen(Auto sa){
 		int getal;
 		try{
-			getal = sa.rijden();
+			getal = 22;
+			throw new RuntimeException();
 		}catch(LekkeBandException e){
-			getal = 7;
-			System.out.println("opgelost");
+			return;
+		}finally{
+			getal = 34;
 		}
 		System.out.println(getal);
 	}
