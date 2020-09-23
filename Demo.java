@@ -1,4 +1,4 @@
-// XG
+// XG Oplossing
 class Demo{
 	public static void main(String[] args){
 		RDW rdw = new RDW();
@@ -14,6 +14,7 @@ class RDW{
 		try{
 			getal = sa.rijden();
 		}catch(LekkeBandException e){
+			getal = 7;
 			System.out.println("opgelost");
 		}
 		System.out.println(getal);
