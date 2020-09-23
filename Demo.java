@@ -1,16 +1,20 @@
 import java.io.*;
-// XB
+// XD
 class Demo{
 	public static void main(String[] args){
 		RDW rdw = new RDW();
 		Auto waggie = new SportAuto();
-		Long l = rdw.rijexamen(waggie);
+		Integer l = rdw.rijexamen(waggie);
 		System.out.println("ready"+l);
 	}
 }
 class RDW{
 	void rijexamen(Auto sa){
-		sa.rijden();
+		try{
+			sa.rijden();
+		}catch(Exception e){
+			System.out.println("opgelost");
+		}
 	}
 }
 class Auto{
