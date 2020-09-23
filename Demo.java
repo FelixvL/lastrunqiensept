@@ -1,37 +1,25 @@
-// XI
+// VB
 class Demo{
 	public static void main(String[] args){
-		RDW rdw = new RDW();
-		Auto waggie = new SportAuto();
-		rdw.rijexamen(new Auto());
-		System.out.println("ready");
+		Meedoen m = x -> x * 3;
+		new Irr().gaan(m);
 	}
 }
-class RDW{
-	void rijexamen(Auto sa){
-		int getal;
-		try{
-			getal = 22;
-			throw new RuntimeException();
-		}catch(LekkeBandException e){
-			return;
-		}finally{
-			getal = 34;
-		}
-		System.out.println(getal);
-	}
-}
-class Auto{
-	int rijden() throws LekkeBandException {
-		System.out.println("riA");
-		return 7;
-	}
-}
-class SportAuto extends Auto{
-	int rijden() throws LekkeBandException{
-		System.out.println("riSA");
-		return 9;
-	}
 
+interface Meedoen{
+	default void ikdoemee(){
+		System.out.println("in Meedoen");
+	}
+	int doen(int getal);
 }
-class LekkeBandException extends Exception{}
+
+class Speler implements Meedoen{
+	
+}
+
+class Irr {
+	void gaan(Meedoen r){
+		System.out.println(r.doen(5));
+	}
+}
+
