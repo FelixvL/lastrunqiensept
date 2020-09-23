@@ -12,7 +12,7 @@ class Demo{
 }
 
 class Server{
-	App app;
+	iApp app;
 	App install(){
 		System.out.println("a");
 		return new iApp();
