@@ -1,4 +1,4 @@
-// VD
+// VF
 class Demo{
 	public static void main(String[] args){
 		Meedoen m = x -> x * 3;
@@ -14,8 +14,9 @@ interface Meedoen{
 }
 
 class Speler implements Meedoen{
-	int doen(int naam){
+	public int doen(int naam){
 		System.out.println("Speler"+naam);
+		return 7;
 	}
 }
 
